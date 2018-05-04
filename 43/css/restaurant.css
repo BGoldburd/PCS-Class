@@ -113,6 +113,11 @@ h2 {
     font-size: 1em;
 }
 
+.pageContent footer a {
+    font-size: 1.3em;
+    font-style: normal;
+}
+
 .menuContent h3 {
     font-size: 2em;
     text-align: right;
@@ -121,12 +126,13 @@ h2 {
 }
 
 .menuContent a {
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 .menuContent img {
     float: left;
-    width: 384px;
+    width: 48%;
+    min-width: 291px;
     height: 300px;
     margin-right: 1em;
     margin-top: 1em;
