@@ -30,14 +30,14 @@ h1 {
     padding: 30px 16px 20px;
     min-width: 23%;
     /* margin-right: 16px; */
-    font-size: 4em;
+    font-size: 3.3em;
     border-radius: 6px;
     text-shadow: 3px 3px 0px red, 0px 0px 10px black;
     box-shadow: 5px 5px 8px 2px rgba(255, 62, 62, 0.5);
 }
 
 h1 span {
-    font-size: .3em;
+    font-size: .34em;
 }
 
 header nav {
@@ -66,7 +66,7 @@ header li {
 header a {
     color: black;
     text-decoration: none;
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
     font-weight: bold;
 }
 
@@ -94,12 +94,16 @@ h2 {
     margin: auto;
     text-align: center;
     margin-top: 2em;
-    font-size: 2em;
+    
     font-style: italic;
 }
 
 .pageContent img {
     width: 100%;
+}
+
+.pageContent h3 {
+    font-size: 2em;
 }
 
 .menuContent {
@@ -113,6 +117,7 @@ h2 {
     font-size: 2em;
     text-align: right;
     margin-bottom: 0;
+    padding-right: 2em
 }
 
 .menuContent a {
@@ -121,8 +126,34 @@ h2 {
 
 .menuContent img {
     float: left;
-    width: 300px;
+    width: 384px;
     height: 300px;
     margin-right: 1em;
     margin-top: 1em;
+}
+
+footer {
+    text-align: center;
+}
+
+footer a {
+    margin: 0 1.7px;
+    font-size: .5em;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li.arrows {
+    list-style-image: url("../images/arrow2.png");
+}
+
+#none {
+    list-style-type: none;
+    list-style-image: none;
 }
