@@ -1,0 +1,244 @@
+html {
+    background-color: rgb(0, 0, 0);
+    /* height: 100%; */
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+    max-width: 100%;
+    margin: auto;
+    /* min-height: 100%; */
+    padding: 1em;
+    padding-top: 0;
+    margin-top: 200px;
+    margin-bottom: 75px;
+}
+
+header {
+    background-color: #bc190e;
+    border-radius: 10px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+h1 {
+    line-height: 55px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #95130a;
+    background-color: #f2d5b5;
+    /* display: inline-block; */
+    text-align: center;
+    float: left;
+    margin: 0 16px 0 12%;
+    padding: 30px 16px 20px;
+    min-width: 23%;
+    /* margin-right: 16px; */
+    font-size: 3.3em;
+    border-radius: 6px;
+    text-shadow: 3px 3px 0px red, 0px 0px 10px black;
+    box-shadow: 5px 5px 8px 2px rgba(255, 62, 62, 0.5);
+    position: fixed;
+}
+
+h1 span {
+    font-size: .34em;
+}
+
+header nav {
+    margin-top: 0;
+    text-align: center;
+    /* display: inline-block; */
+    margin-left: 30%;
+}
+
+header ul {
+    color: black;
+    margin: 0;
+    padding: 16px;
+    list-style-type: none;
+}
+
+/* nav ul {
+    list-style-type: none;
+    padding: 0;
+} */
+
+header li {
+    margin: 0 1.7em;
+    display: inline;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+    /* font-size: 1.2em; */
+    font-weight: bold;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    margin: 0;
+    border-radius: 10px;
+    font-size: 1em;
+    padding: 5px 17px;
+    text-transform: uppercase;
+    text-align: right;
+    color: black;
+    background-color: #ead7d7;
+}
+
+.clearFix {
+    clear: both;
+}
+
+.pageContent {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    margin-top: 2em;
+    
+    font-style: italic;
+}
+
+.pageContent img {
+    width: 100%;
+}
+
+h3 {
+    font-family: 'Fredoka One', cursive;
+    font-weight: normal;
+}
+
+.pageContent h3 {
+    font-size: 2em;
+}
+
+.menuContent {
+    margin: auto;
+    max-width: 800px;
+    margin-top: 2em;
+    font-size: 1em;
+}
+
+.pageContent footer a {
+    font-size: 1em;
+    font-style: normal;
+}
+
+.menuContent h3 {
+    font-size: 2em;
+    text-align: right;
+    margin-bottom: 0;
+    padding-right: 2em
+}
+
+.menuContent a {
+    font-size: 1em;
+}
+
+.menuContent img {
+    float: left;
+    width: 48%;
+    min-width: 291px;
+    height: 300px;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+
+footer {
+    background-color: rgb(107, 107, 107);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 0;
+    
+}
+
+footer a {
+    margin: 0 1.7px;
+    /* font-size: .5em; */
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li.arrows {
+    list-style-image: url("../images/arrow2.png");
+}
+
+#none {
+    list-style-type: none;
+    list-style-image: none;
+}
+
+h5, h6 {
+    display: inline-block;
+    margin: 18px;
+}
+
+h5 {
+    margin-right: 60px;
+}
+
+@font-face {
+    font-family: "Muli-ExtraLightItalic";
+    src: url("../fonts/Muli-ExtraLightItalic.ttf");
+}
+
+h6 {
+    font-family: "Muli-ExtraLightItalic";
+}
+
+audio {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+video {
+    width: 50%;
+}
+
+.media {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.button {
+    width: 200px;
+    height: 199px;
+    margin: 0 auto;
+    background-image: url(../images/button.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 -398px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-position: 0 -199px;
+}
+
+.button:active {
+    background-position: 0 0;
+}
