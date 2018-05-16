@@ -1,6 +1,19 @@
 @media screen and (max-width: 799px) {
     body {
-        margin: 0;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    a[href="#top"] {
+        display: none;
+    }
+
+    .socialMedia {
+        display: none;
+    }
+
+    img[src*="gmo"] {
+        display: none;
     }
 
     h1 {

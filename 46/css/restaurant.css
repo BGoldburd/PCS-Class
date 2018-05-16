@@ -15,10 +15,11 @@ body {
     max-width: 100%;
     margin: auto;
     /* min-height: 100%; */
-    padding: 1em;
-    padding-top: 0;
-    margin-top: 200px;
-    margin-bottom: 75px;
+    margin: 0 1em;
+    padding-top: 180px;
+    /* margin-top: 200px; */
+    margin-bottom: 90px;
+    position: relative;
 }
 
 header {
@@ -241,4 +242,33 @@ video {
 
 .button:active {
     background-position: 0 0;
+}
+
+@media screen and (min-width: 800px) {
+    a[href="#top"] {
+        border: 1px solid white;
+        padding: 10px;
+        color: black;
+        text-decoration: none;
+        transform: translate(0, 150px);
+        position: sticky;
+        top: 100px;
+        bottom: 500px;
+        background-color: darkseagreen;
+    }
+
+    .socialMedia {
+        width: 50px;
+        line-height: 35px;
+        position: fixed;
+        right: 16px;
+        top: 250px;
+    }
+
+    img[src*="gmo"] {
+        width: 80px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
 }
