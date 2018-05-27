@@ -1,0 +1,85 @@
+@media screen and (max-width: 799px) {
+    body {
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    a[href="#top"] {
+        display: none;
+    }
+
+    .socialMedia {
+        display: none;
+    }
+
+    img[src*="gmo"] {
+        display: none;
+    }
+
+    h1 {
+        width: 100%;
+        margin: 5px;
+        line-height: 35px;
+        position: static;
+        margin: 5px 0;
+        box-shadow: unset;
+    }
+
+    header {
+        position: static;
+    }
+
+    header a {
+        font-weight: normal;
+    }
+
+    header nav {
+        font-size: .9em;
+        margin: 0;
+    }
+
+    header ul {
+        padding: 16px;
+    }
+
+    header li {
+        margin: 0 .1em;
+    }
+
+    header li div {
+        display: inline;
+    }
+
+    .dropdown-content a {
+        display: none;
+    }
+
+    .itemDesc {
+        padding-top: 5px;
+    }
+
+    .menuContent h3 {
+        text-align: center;
+        padding: 0;
+    }
+
+    .menuContent img {
+        width: 100%;
+    }
+
+    video {
+        width: 100%;
+    }
+
+    footer {
+        position: static;
+        padding-top: 10px;
+        margin-top: 10px;
+        background-color: unset;
+    }
+
+    h5 {
+        margin: 0;
+    }
+    
+}

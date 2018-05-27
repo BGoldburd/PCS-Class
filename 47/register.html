@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <link rel="stylesheet" href="css/restaurant.css" />
+    <link rel="stylesheet" href="css/restaurantPhone.css"/>
+    <title>BG's Steakhouse and Sushi</title>
+
+</head>
+
+<body>
+        <div class="socialMedia">
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook-icon.jpg" alt="facebook"></a>
+            <a href="https://twitter.com/" target="_blank"><img src="images/twitter-icon.jpg" alt="facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="images/instigram-icon.jpg" alt="facebook"></a>
+        </div>
+        <div>
+            <img src="images/non-gmo-logo.jpg" alt="non-gmo"/>
+        </div>
+        <header>
+                <a href="index.html">
+                    <h1>- BG's -<br/><span>Steakhouse and Sushi</span></h1>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li class="dropdown">
+                            <a href="menu.html" class="dropbtn">our menu</a>
+                            <div class="dropdown-content">
+                                <a href="menuItems/ribeyesteak.html">rib eye steak</a>
+                                <a href="menuItems/chineseChicken.html">chinese chicken</a>
+                                <a href="menuItems/californiaRoll.html">california roll</a>
+                                <a href="menuItems/veggyroll.html">vegetable roll</a>
+                                <a href="menuItems/crispytempura.html">crispy tempura</a>
+                                <a href="fullMenu.html">full menu</a>
+                            </div>
+                        </li>
+                        <li><a href="gallery.html">gallery</a></li>
+                        <li><a href="contact.html">contact us</a></li>
+                        <li class="dropdown">
+                            <a href="logIn.html" class="dropbtn">log in</a>
+                            <div class="dropdown-content">
+                                <form action="logIn.asp" method="post">
+                                    <label for="userName">Username:</label> <input id="userName" name="userName" placeholder="Enter Username" required/>
+                                    <label for="password">Password:</label> <input type="password" id="password" name="password" placeholder="Enter Password"/>
+                                    <label class="remember"><input  type="checkbox" name="remember" id="remember" value="remember"/> Remember Username?</label>
+                                    <input type="submit" value="Sign In"/>
+                                    <p>Not Registered? <a href="register.html">Register</a></p>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <h2>call now 732-000-0000</h2>
+            </header>
+            <div class="clearFix"></div>
+                
+        <div class="menuContent registration">
+            <h4>Please Register</h4>
+            <hr>
+            <form class="register" action="registered.php" method="post">
+                <label for="firstName">First Name:</label> <input id="firstName" name="firstName" placeholder="Enter First Name" required/>
+                <label for="lastName">Last Name:</label> <input id="lastName" name="lastName" placeholder="Enter Last Name" required/>
+                <label for="address">Mailing Address:</label> <input id="address" name="address" placeholder="Enter Address" required/>
+                <label for="city">City:</label> <input id="city" name="city" required/>
+                <label for="state">State:</label>
+                    <select name="state" id="state" required>
+                        <option>New York</option>
+                        <option>New Jersey</option>
+                        <option>Connecticut</option>
+                    </select>
+                <label for="zip">Zip:</label> <input type="number" id="zip" name="zip" minlength="5" maxlength="5" required/>
+                <label for="phone">Phone:</label> <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number"/>
+                <label for="email">Email Address:</label> <input type="email" id="email" name="email" placeholder="Enter Valid Email" required/>
+                <label for="userName">Create Username:</label> <input id="userName" name="userName" placeholder="Username" required/>
+                <label for="password">Create Password:</label> <input type="password" id="password" name="password" placeholder="Password" required/>
+                <label for="password2">Please Re-enter Password:</label> <input type="password" id="password2" placeholder="Re-enter Password" required/>
+                <hr>
+                <label for="usCitizen">Are You a U.S. Citizen? </label>
+                <input type="radio" id="usCitizen" name="usCitizen" value="yes"/> yes
+                <input type="radio" id="usCitizen" name="usCitizen" value="no"/> no
+                <hr>
+                <h4>Please Rate  Us!</h4>
+                <hr>
+                <label for="visited">Date Recently Visited:</label><input type="date" name="dateVisited"/>
+                <label for="rating">How Was Your Experience?</label> 
+                <table class="rating"><tr><td>1</td><td>10</td></tr></table>
+                <input type="range" name="rating" min="1" max="10"/>
+                <label for="comments">Comments:</label><textarea name="comments" placeholder="Add comment">My experience in BG's Steakhouse and Sushi was...</textarea>
+                <button type="submit">Register</button>
+                <button type="reset">CLEAR</button>
+            </form>
+        </div>
+<footer>
+    <h5>
+            <nav>   
+                <a href="index.html">home</a> |
+                <a href="menu.html">our menu</a> |
+                <a href="gallery.html">gallery</a> |
+                <a href="contact.html">contact us</a>
+                    
+            </nav>
+    </h5>
+    <h6>&copy; BG Web Design</h6>
+</footer>
+
+</body>
+
+</html>
