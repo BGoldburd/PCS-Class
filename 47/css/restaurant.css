@@ -251,7 +251,7 @@ video {
     color: black;
 }
 
-.register input:not([type="radio"]) {
+.register input:not([type="radio"]):not([type="checkbox"]) {
     margin-bottom: 1em;
     margin-top: .2em;
 }
@@ -262,12 +262,13 @@ video {
 */:not([id="zip"])/*
 */:not([type="radio"])/*
 */:not([type="submit"])/*
-*/:not([type="reset"]) {
+*/:not([type="reset"])/*
+*/:not([type="checkbox"]) {
    width: 100%;
    display: block;
 }
 
-.register input:not([type="radio"]), select {
+.register input:not([type="radio"]):not([type="submit"]), select {
     height: 2em;
     border-radius: 3px;
     padding-left: 10px;
@@ -285,6 +286,29 @@ video {
     padding-left: 10px;
     margin-bottom: 1em;
     margin-top: .2em;
+}
+
+.menuContent.registration.logIn {
+    max-width: 600px;
+    font-size: 1.2em;
+} 
+
+input#remember {
+    height: 13px;
+}
+
+input.signInPage {
+    display: block;
+    margin: 0 auto;
+    padding: 12px;
+    height: unset;
+    width: 7em;
+    background-color: darkgray;
+    font-weight: bold;
+}
+
+form.register a[href="register.html"] {
+    color: red;
 }
 
 table.rating tr:nth-child(odd) {

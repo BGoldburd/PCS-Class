@@ -81,5 +81,25 @@
     h5 {
         margin: 0;
     }
+
+    .dropdown-content {
+        display: none;
+    }
+
+    .dropdown a[href="logIn.html"] {
+        display: block;
+        padding: 4px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        margin: 0 10px;
+        font-weight: bold;
+    }
     
+    header li {
+        line-height: 2em;
+    }
+
+    header ul {
+        padding: 0;
+    }
 }
