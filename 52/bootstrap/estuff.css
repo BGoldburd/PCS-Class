@@ -1,0 +1,200 @@
+body {
+    margin: 50px 0 65px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: black;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+footer {
+    background-color: black;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+header nav, footer p {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header ul {
+    margin: 0;
+    padding: 16px 0;
+}
+
+footer p {
+    padding: 16px 0;
+}
+
+header li {
+    list-style-type: none;
+    display: inline;
+    margin-right: 16px;
+}
+
+header a, footer p {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+article {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.heading {
+    background-color: lightgray;
+    text-align: center;
+    padding: 25px;
+}
+
+.heading h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+    margin: 19.92px 0;
+}
+
+.heading span {
+    font-style: italic;
+}
+
+#carouselExampleIndicators {
+    width: 60%;
+    margin: 0 auto;
+}
+
+section:not(.heading):not(.pictures) {
+    padding-top: 50px;
+}
+
+.pictures {
+    margin: 16px 0;
+}
+
+.picture {
+    display: inline-block;
+    width: 33.33%;
+    padding: 16px;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: top;
+}
+
+.picture:nth-child(2) {
+    border-right: 1px solid gray;
+    border-left:  1px solid gray;
+}
+
+.picture img, .picture video {
+    width: 100%;
+}
+
+.picture p {
+    text-align: justify;
+}
+
+#signUp {
+    height: 60px;
+}
+
+.rounded {
+    border-radius: 8px;
+}
+
+.form-group {
+    display: inline;
+}
+
+input, button {
+    /* padding: 5px;
+    border-radius: 5px; */
+}
+
+input {
+    /* box-shadow: 2px 2px 2px 2px black; */
+    /* margin-right: 10px; */
+}
+
+.table {
+    width: 80%;
+    margin: 0 auto;
+}
+
+caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 1em;
+    text-align: center;
+    caption-side: top;
+}
+
+td, th {
+    /* border: 1px solid black; */
+    /* padding: 4px; */
+}
+
+th {
+    text-align: right;
+}
+
+td {
+    text-align: right;
+}
+
+tfoot th {
+    text-align: right;
+}
+
+td:last-child {
+    color: red;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+tr:hover, tr:nth-child(odd):hover {
+    background-color: blue;
+}
+
+@media screen and (max-width: 999px) {
+    .picture {
+        display: block;
+        width: 100%;
+    }
+
+    .picture:nth-child(2) {
+        border-right: none;
+        border-left: none;
+    }
+
+    .form-group {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #carouselExampleIndicators {
+        width: 100%;
+    }
+
+    .table {
+        font-size: .4em;
+    }
+
+    td, th {
+        padding: 3px !important;
+    }
+}
