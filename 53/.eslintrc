@@ -1,0 +1,23 @@
+
+{
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 6
+        
+    },
+    "rules": {
+        
+        "indent": ["error", 4],
+        "semi": ["error", "always"],
+
+        "no-unused-vars": "warn",
+        "comma-dangle": ["error", "always"],
+        "no-cond-assign": ["error", "always"],
+
+        "ecmaVersion": 6,
+        "no-console": "off"
+    },
+    "globals": {
+        "console": true
+    }
+}
