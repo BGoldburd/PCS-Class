@@ -1,14 +1,11 @@
-var app = app || {};
-
-(function () {
+var app = (function (theModule) {
     'use strict';
 
     var amountOfCreations = 0;
     
-    app.counterCreator = function () {
+    theModule.counterCreator = function () {
         
         amountOfCreations++;
-
         console.log("amountOfCreations:", amountOfCreations);
 
         let count = 0;
@@ -22,4 +19,6 @@ var app = app || {};
             }
         };       
     };
-}());
+
+    return theModule;
+}(app || {}));
