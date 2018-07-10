@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.4em;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            margin: auto;
+        }
+        input, button {
+            padding: 6px;
+            border-radius: 4px;
+            margin-top: 6px;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <label for="backgroundColor">Please Choose a Background Color:</label>
+        <input type="color" id="backgroundColor" name="backgroundColor">
+        <button id="backgroundButton">Apply</button>
+    </div>
+    <div class="text">
+        <label for="textColor">Please Choose a text Color:</label>
+        <input type="color" id="textColor" name="textColor">
+        <button id="textButton">Apply</button>
+    </div>
+    <script src="changeColor.js"></script>
+</body>
+</html>
