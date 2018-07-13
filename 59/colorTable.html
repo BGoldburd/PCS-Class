@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        header {
+            border: 5px solid black;
+            text-align: center;
+            padding: 70px;
+            background: linear-gradient(90deg, rgba(36,0,32,0.5942752100840336) 0%, rgba(66,18,88,1) 12%, rgba(37,70,152,1) 27%, rgba(47,153,41,0.4738270308123249) 45%, rgba(171,172,32,1) 63%, rgba(191,95,88,1) 81%, rgba(0,212,255,1) 100%);
+        }
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+        }
+        button {
+            font-weight: bold;
+            margin: 10px auto;
+            display: block;
+            padding: 6px;
+            width: 80px;
+            border-radius: 6px;
+            outline: none;
+            background-color: lightblue;
+        }
+        table {
+            width: 70%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        th,
+        td {
+            border: 1px solid black;
+            padding: 6px;
+        }
+        td:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Color Changer</h1>
+    </header>
+    <button id="theButton">Start</button>
+    <table id="colorsTable">
+            <thead>
+                <tr>
+                    <th>Background Color</th>
+                    <th>Text Color</th>
+                    <th>Time Captured</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="3">No Colors Saved</td>
+                </tr>
+            </tbody>
+        </table>
+    <script src="colorTable.js"></script>
+</body>
+</html>
