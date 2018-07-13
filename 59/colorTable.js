@@ -73,7 +73,8 @@
     }
 
     theTable.addEventListener('click', function(event) {
-        document.body.style.backgroundColor = event.path[1].querySelector("td:nth-child(1)").innerHTML;
-        document.body.style.color = event.path[1].querySelector("td:nth-child(2)").innerHTML;
+        console.log(event.target.parentNode);
+        document.body.style.backgroundColor = event.target.parentNode.querySelector("td:nth-child(1)").innerHTML;
+        document.body.style.color = event.target.parentNode.querySelector("td:nth-child(2)").innerHTML;
     });
 }());
