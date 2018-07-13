@@ -73,7 +73,6 @@
     }
 
     theTable.addEventListener('click', function(event) {
-        console.log(event.target.parentNode);
         document.body.style.backgroundColor = event.target.parentNode.querySelector("td:nth-child(1)").innerHTML;
         document.body.style.color = event.target.parentNode.querySelector("td:nth-child(2)").innerHTML;
     });
