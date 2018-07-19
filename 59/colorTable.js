@@ -73,7 +73,12 @@
     }
 
     theTable.addEventListener('click', function(event) {
-        document.body.style.backgroundColor = event.target.parentNode.querySelector("td:nth-child(1)").innerHTML;
-        document.body.style.color = event.target.parentNode.querySelector("td:nth-child(2)").innerHTML;
+        if ((event.target.parentNode !== theTable.rows[0]) && event.target.parentNode.cells[1]) {
+            document.body.style.backgroundColor = event.target.parentNode.querySelector("td:nth-child(1)").innerHTML;
+            document.body.style.color = event.target.parentNode.querySelector("td:nth-child(2)").innerHTML;
+        }
+
+        /*document.body.style.backgroundColor = event.target.parentNode.cells[0].innerHTML;
+        document.body.style.color = event.target.parentNode.cells[1].innerHTML;*/
     });
 }());
