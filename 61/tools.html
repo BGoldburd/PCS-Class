@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="donald">Donald Trump</h1>
+    <h1 id="vladimir">Vladimir Putin</h1>
+    <script src="tools.js"></script>
+
+    <script>
+        //const donald = pcs.tools.get('donald');
+        //pcs.tools.setCss(donald, 'color', 'red');
+        const donald = pcs('donald')
+            .css('color', 'red')
+            .css('fontSize', '46px')
+            .click(function (event) {
+                console.log('The Donald was clicked!', event);
+            });
+        console.log(donald.css('color'));
+
+        const vladimir = pcs('vladimir');
+        /*vladimir.hide();
+
+        setTimeout(function () {
+            vladimir.show();
+        }, 1000);*/
+
+        vladimir.changeColors(100);
+        donald.changeColors();
+
+        donald.data("foo", 5);
+        donald.data("foo2", 10);
+        donald.data("foo3", 15);
+        
+        console.log(donald.data("foo"));
+        console.log(donald.data("foo2"));
+        console.log(donald.data("foo3"));
+        
+        console.log(donald.viewData());
+    </script>
+</body>
+
+</html>
