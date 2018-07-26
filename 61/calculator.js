@@ -23,6 +23,7 @@
         numberPressed = true;
         if (operatorPressed) {
             operatorPressed.style.backgroundColor = 'lightgreen';
+            operatorPressed.style.color = 'black';
         }
         if (event.target.innerHTML === '.') {
             decimalPressed = true;
@@ -44,6 +45,7 @@
         if (event.target.innerHTML !== '=') {    
             operatorPressed = event.target;
             operatorPressed.style.backgroundColor = 'green';
+            operatorPressed.style.color = 'white';
         }
         currentOperator = event.target.innerHTML;
         displayVal = '';
@@ -59,6 +61,7 @@
         decimalPressed = false;
         display.innerHTML = currentValue;
         operatorPressed.style.backgroundColor = 'lightgreen';
+        operatorPressed.style.color = 'black';
     });
 
 
