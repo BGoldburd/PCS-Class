@@ -1,10 +1,11 @@
 (function () {
     'use strict';
 
-    let display = document.getElementById('display');
-    let clear = document.getElementById('clear');
-    let numbers = document.getElementById('numbers');
-    let operators = document.getElementById('operators');
+    function get (id) {
+        return document.getElementById(id);
+    }
+    
+    let display = get('display');
     let displayVal = '';
     let currentOperator = null;
     let currentValue;
@@ -12,7 +13,7 @@
     let numberPressed = false;
     let operatorPressed = null;
 
-    numbers.addEventListener('click', function (event) {
+    get('numbers').addEventListener('click', function (event) {
         //don't allow clicking on outer numbers div
         if (event.target.id === 'numbers' || (decimalPressed && event.target.innerHTML === '.') || currentOperator === '=') {
             return;
@@ -30,7 +31,7 @@
         }
     });
 
-    operators.addEventListener('click', function (event) {
+    get('operators').addEventListener('click', function (event) {
         //not to allow double pressing operators, besides pressing operators after equals
         if ((!numberPressed && currentOperator !== '=') || event.target.id === 'operators') {
             return;
@@ -53,16 +54,33 @@
         decimalPressed = false;
     });
 
-    clear.addEventListener('click', function () {
+    get('clear').addEventListener('click', function () {
         displayVal = '';
         currentOperator = null;
         currentValue = 0;
         numberPressed = false;
         decimalPressed = false;
         display.innerHTML = currentValue;
-        operatorPressed.style.backgroundColor = 'lightgreen';
-        operatorPressed.style.color = 'black';
+        if (operatorPressed) {
+            operatorPressed.style.backgroundColor = 'lightgreen';
+            operatorPressed.style.color = 'black';
+        }
     });
 
+    get('positiveNegative').addEventListener('click', function () {
+        if (!numberPressed && currentOperator !== '=') {
+            return;
+        }
+        displayVal = -display.innerHTML;
+        display.innerHTML = displayVal;
+    });
+
+    get('percent').addEventListener('click', function () {
+        if (!numberPressed && currentOperator !== '=') {
+            return;
+        }
+        displayVal = display.innerHTML/100;
+        display.innerHTML = displayVal;
+    });
 
 }());
