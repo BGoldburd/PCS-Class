@@ -1,5 +1,5 @@
-
-var pcs = (function () {
+// eslint-disable-next-line
+var pcs = (function () {     // jshint ignore:line
     'use strict';
 
     function get(id) {
