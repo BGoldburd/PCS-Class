@@ -11,4 +11,12 @@
         event.preventDefault();
     });
 
+    $('#check').on('change', function () {
+        if (this.checked) {
+            $('fieldset').removeAttr("disabled");
+        } else {
+            $('fieldset').attr("disabled", "disabled");
+        }
+    });
+
 }());
