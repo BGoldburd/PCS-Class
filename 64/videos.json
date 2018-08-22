@@ -12,5 +12,33 @@
     {
         "title": "Yesh Tikvah",
         "url": "videos/yesh tikvah.mp4"
+    },
+    {
+        "title": "El Hanaar Hazeh",
+        "url": "videos/El Hanaar Hazeh.mp4",
+        "image": "images/shira.png"
+    },
+    {
+        "title": "Ivri",
+        "url": "videos/ivri.mp4",
+        "image": "images/bennyF.png"
+    },
+    {
+        "title": "Yesh Tikvah",
+        "url": "videos/yesh tikvah.mp4"
+    },
+    {
+        "title": "El Hanaar Hazeh",
+        "url": "videos/El Hanaar Hazeh.mp4",
+        "image": "images/shira.png"
+    },
+    {
+        "title": "Ivri",
+        "url": "videos/ivri.mp4",
+        "image": "images/bennyF.png"
+    },
+    {
+        "title": "Yesh Tikvah",
+        "url": "videos/yesh tikvah.mp4"
     }
 ]

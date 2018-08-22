@@ -21,6 +21,13 @@
             right: 0;
             left: 0;
             top: 0;
+            overflow: hidden;
+            padding-top: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .list:hover {
+            overflow: auto;
         }
 
         .result {
@@ -33,8 +40,9 @@
         }
 
         img {
-            width: 80%;
+            width: 180px;
             height: 100px;
+            margin-top: 3px;
         }
         
         video {
@@ -46,7 +54,7 @@
         }
 
         li {
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         li:hover {
@@ -61,7 +69,7 @@
     </section><!--
     --><section class='result'>
         <div>
-            <video controls></video>
+            <video poster="images/defaultVideo.jpg"></video>
         </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
