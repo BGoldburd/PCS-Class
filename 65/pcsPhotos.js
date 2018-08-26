@@ -64,7 +64,7 @@
 
                 /*originally load photos with low quality, then reload with high quality
                 to help with speed and efficiency*/
-                setInterval( () => {
+                setTimeout( () => {
                     img.attr('src', photo.media.m.replace('_m.jpg', '.jpg'));
                 }, 0);
                 
