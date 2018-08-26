@@ -23,6 +23,10 @@ h1 {
     grid-gap: 5px;
     grid-auto-flow: dense;
 }
+figure:hover {
+    cursor: pointer;
+    opacity: .7;
+}
 #initialPhoto {
     /* grid-column: span 3; */
     position: fixed;

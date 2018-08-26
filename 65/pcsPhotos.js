@@ -33,11 +33,11 @@
                 h3.text(photo.title);
 
                 /*$(`<figure>
-                    <figcaption>
-                        <h3>${photo.title}</h3>
-                    </figcaption>
-                    <img src="${photo.media.m}" alt="${photo.title}">
-                </figure>`)*/
+                        <figcaption>
+                            <h3>${photo.title}</h3>
+                        </figcaption>
+                        <img src="${photo.media.m}" alt="${photo.title}">
+                    </figure>`)*/
                 figure.appendTo(photosContainer)
                 .click( function () {
                     carouselContainer.css('display', 'flex');
