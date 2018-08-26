@@ -20,13 +20,25 @@
         $.getJSON(`https://api.flickr.com/services/feeds/photos_public.gne?tags=${searchInput.val()}&format=json&jsoncallback=?`, photos => {
             console.log(photos);
             photos.items.forEach(photo => {
-                $(`<figure>
+                let figure = $(document.createElement('figure'));
+                let figcaption = $(document.createElement('figcaption'));
+                let h3 = $(document.createElement('h3'));
+                let img = $(document.createElement('img'));
+
+                figure.append(figcaption);
+                figcaption.append(h3);
+                figure.append(img);
+
+                img.attr('src', photo.media.m);
+                h3.text(photo.title);
+
+                /*$(`<figure>
                     <figcaption>
                         <h3>${photo.title}</h3>
                     </figcaption>
                     <img src="${photo.media.m}" alt="${photo.title}">
-                </figure>`)
-                .appendTo(photosContainer)
+                </figure>`)*/
+                figure.appendTo(photosContainer)
                 .click( function () {
                     carouselContainer.css('display', 'flex');
                     carouselImage.attr('src', photo.media.m.replace('_m.jpg', '.jpg'));
@@ -50,6 +62,11 @@
                 })
                 .data('number', counter++);
 
+                /*originally load photos with low quality, then reload with high quality
+                to help with speed and efficiency*/
+                setInterval( () => {
+                    img.attr('src', photo.media.m.replace('_m.jpg', '.jpg'));
+                }, 0);
                 
             });
             
