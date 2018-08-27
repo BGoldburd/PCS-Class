@@ -2,6 +2,7 @@
     height: 65px;
 }
 h1 {
+    text-shadow: 2px 2px 2px gray;
     font-size: 3.5em;
     position: fixed;
     color: whitesmoke;
