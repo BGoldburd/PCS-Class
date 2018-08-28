@@ -1,5 +1,5 @@
 .navbar {
-    height: 65px;
+    min-height: 65px;
 }
 h1 {
     text-shadow: 2px 2px 2px gray;
@@ -71,4 +71,32 @@ h3 {
 .carousel-control-prev, .carousel-control-next {
     width: 10%;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1050px) {
+    #initialPhoto {
+        height: 100%;
+    }
+    h1 {
+        text-shadow: 2px 2px 2px gray;
+        font-size: 3.5em;
+        position: fixed;
+        color: whitesmoke;
+        top: 60%;
+        padding: 30px;
+        margin-left: initial;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #initialPhoto {
+        height: 100%;
+        width: unset;
+    }
+    #photosContainer {
+        grid-template-columns: 1fr;
+    }
+    #photosContainer {
+        margin-top: 156px;
+    }
 }
