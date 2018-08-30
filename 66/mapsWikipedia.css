@@ -42,11 +42,16 @@ html, body, #map, #mapContainer {
 
 ul {
     list-style-type: none;
-    padding: 10px 40px;
+    padding-left: 0;
+    padding-top: 12px;
 }
 
 li {
-    margin: 15px 0;
+    padding: 10px 40px 20px;
+}
+
+li:not(:last-child) {
+    border-bottom: 1px solid lightgrey;
 }
 
 li:hover {
