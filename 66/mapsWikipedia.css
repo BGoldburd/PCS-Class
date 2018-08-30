@@ -68,8 +68,12 @@ article {
 }
 
 .markerImage {
-    width: 100px;
+    height: 82px;
     float: left;
     margin-right: 8px;
     margin-bottom: 8px;
+}
+
+article {
+    display: none;
 }

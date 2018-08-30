@@ -7,7 +7,7 @@
 
         const map = new google.maps.Map(document.getElementById('map'), {
             center: location,
-            zoom: 15
+            zoom: 2
         });
 
         
@@ -23,7 +23,10 @@
         const searchButton = $('#searchButton');
         const listContainer = $('.listContainer');
         const mapContainer = $('#mapContainer');
-        let infoWindow = new google.maps.InfoWindow();
+        let infoWindow = new google.maps.InfoWindow({
+            maxWidth: 300
+        });
+        let markers = [];
 
         
 
@@ -31,6 +34,10 @@
             listContainer.css('display', 'inline-block');
             mapContainer.css('padding-left', '20%');
             placeList.empty();
+            markers.forEach(marker => {
+                marker.setMap(null);
+            });
+            markers = [];
             $.getJSON('http://api.geonames.org/wikipediaSearch?username=bgoldburd&type=json',
             {q: searchInput.val(), maxRows: 20}, placeData => {
                 console.log(placeData);
@@ -40,16 +47,18 @@
                     $(`<li>
                         <div>${place.title}</div>
                         <img src="${place.thumbnailImg || 'images/marker.png'}" alt="${place.title}"/>
+                        <article>${place.summary}<br><a target="_blank" href="https://${place.wikipediaUrl}">learn more</a></article>
                     </li>`)
                     .appendTo(placeList)
                     .click(function () {
                         map.panTo({lat: place.lat, lng: place.lng});
                         map.setZoom(15);
                         infoWindow.close();
-                        if (!this.children[2]) {
-                            $(this).append(`<article>${place.summary}<br><a target="_blank" href="https://${place.wikipediaUrl}">learn more</a></article>`);
+                        let article = $(this).find('article');
+                        if (article.css('display') === 'none') {
+                            article.slideDown('fast');
                         } else {
-                            $(this.children[2]).remove();
+                            article.slideUp('fast');
                         }
                     });
 
@@ -66,11 +75,14 @@
                         infoWindow.setContent(`<img class="markerImage" src="${place.thumbnailImg || 'images/marker.png'}"/>${place.summary}`);
                         infoWindow.open(map, marker);
                     });
+
+                    markers.push(marker);
                     
                     bounds.extend(markerlocation);
-                    map.fitBounds(bounds);
 
                 });
+ 
+                map.fitBounds(bounds);
             });
         });
 
