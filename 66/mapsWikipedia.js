@@ -3,11 +3,11 @@
     'use strict';
 
     window.initMap = function () {
-        let location = { lat: 40.09680866454403, lng: -74.2213982035816 };
+        let location = { lat: 13.682976569464984, lng: -11.467491953581657 };
 
         const map = new google.maps.Map(document.getElementById('map'), {
             center: location,
-            zoom: 2
+            zoom: 3
         });
 
         
