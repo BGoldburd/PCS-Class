@@ -91,3 +91,11 @@ article {
 #centerControlDiv2 {
     display: none;
 }
+
+#exitSpan {
+    padding: 4px 10px;
+    border-left: 1px solid grey;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: cursive;
+}

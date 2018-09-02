@@ -91,8 +91,9 @@
         let allItems = [];
         let selectedItem;
         let selectedItemId;
-        var centerControlDiv = document.createElement('div');
+        let centerControlDiv = document.createElement('div');
         let centerControlDiv2 = document.createElement('div');
+        let exitSpan = document.createElement('span');
         const drawingManager = new google.maps.drawing.DrawingManager({
             drawingControlOptions: {
                 position: google.maps.ControlPosition.TOP_CENTER
@@ -303,6 +304,13 @@
 
         ////for 'clear selection' button///////////////////////////////////
         centerControlDiv2.id = 'centerControlDiv2';
+        exitSpan.innerHTML = 'X';
+        exitSpan.id = 'exitSpan';
+        exitSpan.title = 'Cancel';
+        exitSpan.addEventListener('click', event => {
+            event.stopPropagation();
+            centerControlDiv2.style.display = 'none';
+        });
         new CenterControl2(centerControlDiv2);
         centerControlDiv2.index = 1;
         map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv2);
@@ -326,8 +334,10 @@
             controlText.style.lineHeight = '24px';
             controlText.style.paddingLeft = '5px';
             controlText.style.paddingRight = '5px';
+            controlText.style.display = 'inline-block';
             controlText.innerHTML = 'Clear Selection';
             controlUI.appendChild(controlText);
+            controlUI.appendChild(exitSpan);
     
             controlUI.addEventListener('click', function() {
                 selectedItem.setMap(null);
