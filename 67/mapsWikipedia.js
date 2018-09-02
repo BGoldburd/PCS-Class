@@ -142,6 +142,8 @@
             clickToRemoveSelection (event.overlay, localStorageId);
         });
 
+
+        /////create all items saved in local storage upon startup/////////////////////////////
         let items = Object.keys(localStorage);
         console.log(items);
         items.forEach( item => {
@@ -252,6 +254,8 @@
             });
         }
 
+
+        //////function for removing selected item///////////////////////////////////////
         function clickToRemoveSelection (item, id) {
             item.addListener('click', () => {
                 centerControlDiv2.style.display = 'block';
@@ -296,6 +300,8 @@
             });
         }
 
+
+        ////for 'clear selection' button///////////////////////////////////
         centerControlDiv2.id = 'centerControlDiv2';
         new CenterControl2(centerControlDiv2);
         centerControlDiv2.index = 1;
