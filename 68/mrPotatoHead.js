@@ -35,4 +35,7 @@
         $(`#${piece}`).css(JSON.parse(localStorage.getItem(piece)));
     });
     
+    $(function () {
+        $('body').append('<audio src="media/1-17 Ponchielli_ La Gioconda - Dance.m4a" controls autoplay loop></audio>');
+    });
 }());
