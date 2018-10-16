@@ -4,3 +4,4 @@ test.txt
 74/dist/
 74/node_modules/
 testGitignore/
+!74/testGitignore/
