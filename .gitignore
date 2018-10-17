@@ -1,6 +1,5 @@
 test.txt
 43b/
 52/bootstrap/media/
-74/dist/
-74/node_modules/
-testGitignore/
+dist/
+node_modules/
