@@ -1,0 +1,25 @@
+header {
+    padding: 20px;
+    background-color: rgb(230, 253, 124);
+    text-align: center;
+    text-transform: uppercase;
+}
+li {
+    list-style-type: none;
+    cursor: pointer;
+}
+#list {
+    display: inline-block;
+    vertical-align: top;
+}
+#details {
+    display: inline-block;
+    margin: 16px;
+    text-align: center;
+}
+img {
+    width: 400px;
+}
+h2 {
+    margin-top: 0;
+}
