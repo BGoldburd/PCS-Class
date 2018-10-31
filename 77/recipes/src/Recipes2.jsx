@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import RecipeDetails from './RecipeDetails';
-import Cholent from './images/cholent.jpg'
-import Chicken from './images/chicken.jpg'
-import Kugel from './images/kugel.jpg'
-import './Recipes.css';
+import Cholent from './images/cholent.jpg';
+import Chicken from './images/chicken.jpg';
+import Kugel from './images/kugel.jpg';
+import './Recipes2.css';
 
-class Recipes extends Component {
+class Recipes2 extends Component {
     state = { 
         recipes: [
             {
@@ -49,7 +49,7 @@ class Recipes extends Component {
     }
 
     render() { 
-        const selectedRecipe = this.state.selectedRecipe ? <RecipeDetails onChange={this.update} index={this.state.selectedRecipe.id} className="recipes" color="red" recipe={this.state.selectedRecipe}/> : null;
+        const selectedRecipe = this.state.selectedRecipe ? <RecipeDetails onChange={this.update} index={this.state.selectedRecipe.id} className="recipes2" color="yellow" recipe={this.state.selectedRecipe}/> : null;
         
         return (
             <React.Fragment>
@@ -64,4 +64,4 @@ class Recipes extends Component {
     }
 }
  
-export default Recipes;
+export default Recipes2;
