@@ -44,12 +44,18 @@ class Recipes extends Component {
         }));
     }
 
+    remove = id => {
+        this.setState(prevState => ({
+            recipes: prevState.recipes.filter(recipe => recipe.id !== id)
+        }));
+    }
+
     getRecipes() {
         return this.state.recipes.map((recipe, index) => <li key={index} onClick={() => this.showDetails(recipe)}>{recipe.name}</li>);
     }
 
     render() { 
-        const selectedRecipe = this.state.selectedRecipe ? <RecipeDetails onChange={this.update} index={this.state.selectedRecipe.id} className="recipes" color="red" recipe={this.state.selectedRecipe}/> : null;
+        const selectedRecipe = this.state.selectedRecipe ? <RecipeDetails onChange={this.update} onRemove={this.remove} index={this.state.selectedRecipe.id} className="recipes" color="red" recipe={this.state.selectedRecipe}/> : null;
         
         return (
             <React.Fragment>
