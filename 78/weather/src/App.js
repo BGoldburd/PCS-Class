@@ -1,0 +1,30 @@
+import React, { Component } from 'react';
+import './App.css';
+import Form from './Form';
+import Weather from './Weather';
+
+class App extends Component {
+  state = {
+    weather: {}
+  }
+
+  getWeather = weatherData => {
+    this.setState({
+      weather: weatherData
+    })
+  }
+
+  render() {
+    return (
+      <div className="container-fluid p-0">
+        <div class="jumbotron jumbotron-fluid m-0 text-center p-3">
+          <h1 class="p-3" style={{fontFamily: 'cursive'}}>Best Weather App</h1>
+        </div>
+        <Form getWeather={this.getWeather}/>
+        <Weather weatherData={this.state.weather}/>
+      </div>
+    );
+  }
+}
+
+export default App;
