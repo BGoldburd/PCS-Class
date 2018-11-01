@@ -38,10 +38,15 @@ class Form extends Component {
         }, () => this.fetchWeather());     
     }
 
+    handleSubmit = event => {
+        event.preventDefault();
+        this.fetchWeather();
+    }
+
     render() { 
         return ( 
             <div className="row d-flex flex-row-reverse bg-primary mb-5 ml-0 mr-0 justify-content-center">
-                <form className="form-inline m-3">
+                <form onSubmit={this.handleSubmit} className="form-inline m-3">
                     <div className="form-group">
                         <input className="form-control" name="zip" id="zip" onBlur={this.fetchWeather} onChange={this.handleInputChange} value={this.state.zip} placeholder="enter zip code" />
                     </div>
