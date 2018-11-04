@@ -6,18 +6,16 @@ class Form extends Component {
 
         this.state = {
             zip: 11204,
-            units: 'metric'
+            units: 'imperial'
         }
 
         this.fetchWeather();
     }
 
     fetchWeather = () => {
-        fetch(`http://api.openweathermap.org/data/2.5/weather?APPID=cb7c71219cf09eb0bb414b932669be97&zip=${this.state.zip}&units=${this.state.units}`,
-                { zip: this.state.zip, units:this.state.units })
+        fetch(`http://api.openweathermap.org/data/2.5/weather?APPID=cb7c71219cf09eb0bb414b932669be97&zip=${this.state.zip}&units=${this.state.units}`)
         .then(response => response.json())
         .then(weatherData => {
-            console.log(weatherData);
             this.props.getWeather(weatherData);
         });
     }
