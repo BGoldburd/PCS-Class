@@ -14,6 +14,9 @@ class AddRecipe extends Component {
     }
     
 
+
+/////////// UPDATE STATE VALUES //////////////////////////////////////////////////////////////////
+
     handleNameInput = event => {
         this.setState({
             name: event.target.value
@@ -38,6 +41,9 @@ class AddRecipe extends Component {
         });
     }
 
+
+//////////// ADD INPUT FIELDS ///////////////////////////////////////////////////////////////////////////////
+
     addInstructionInput = () => {
         const newInputArray = [...this.state.instructionInputs];
         const newInput = <input name={newInputArray.length} onChange={this.handleInstructionInput} value={this.state.instructions[newInputArray.length]} className="form-control" id="instructions" placeholder="Enter instruction" required/>
@@ -49,12 +55,44 @@ class AddRecipe extends Component {
 
     addIngredientInput = () => {
         const newInputArray = [...this.state.ingredientInputs];
-        const newInput = <input name={newInputArray.length} onChange={this.handleIngredientInput} value={this.state.ingredients[newInputArray.length]} className="form-control" id="ingredients" placeholder="Enter ingredients" required/>
+        const newInput = <input name={newInputArray.length} onChange={this.handleIngredientInput} value={this.state.ingredients[newInputArray.length]} className="form-control" id="ingredients" placeholder="Enter ingredient" required/>
         newInputArray.push(newInput);
         this.setState({
             ingredientInputs: newInputArray
         });
     }
+
+
+/////////// REMOVE INPUT FIELDS ////////////////////////////////////////////////////////////////
+
+    removeIngredientInput = () => {
+        const newInputArray = [...this.state.ingredientInputs];
+        const newIngredientsArray = [...this.state.ingredients];
+        if (newInputArray.length === newIngredientsArray.length) {
+            newIngredientsArray.pop();
+        }
+        newInputArray.pop();
+        this.setState({
+            ingredients: newIngredientsArray,
+            ingredientInputs: newInputArray
+        });
+    }
+
+    removeInstructionInput = () => {
+        const newInputArray = [...this.state.instructionInputs];
+        const newInstructionsArray = [...this.state.instructions];
+        if (newInputArray.length === newInstructionsArray.length) {
+            newInstructionsArray.pop();
+        }
+        newInputArray.pop();
+        this.setState({
+            instructions: newInstructionsArray,
+            instructionInputs: newInputArray
+        });
+    }
+
+
+////////// SUBMIT FORM //////////////////////////////////////////////////////////////////////////
 
     handleSubmit = event => {
         this.props.handleAddRecipe({
@@ -66,8 +104,10 @@ class AddRecipe extends Component {
         event.preventDefault();
     }
 
+    
+    
+    
     render() {
-
         return (
             <>
                 <h3>Add Recipe:</h3>
@@ -80,16 +120,26 @@ class AddRecipe extends Component {
                         <label for="ingredients">Ingredients</label>
                         {this.state.ingredientInputs}
                     </div>
-                    <button onClick={e => {e.preventDefault(); this.addIngredientInput()}} className="btn btn-default btn-sm">
-                        <span>+</span> Add
-                    </button>
+                    <div className="d-flex justify-content-between">
+                        <button type="button" onClick={this.addIngredientInput} className="btn btn-default btn-sm">
+                            <span>+</span> Add
+                        </button>
+                        <button onClick={this.removeIngredientInput} type="button" className="btn btn-outline-danger btn-sm" style={this.state.ingredientInputs.length <= 1 ? {display: 'none'} : {}}>
+                            remove
+                        </button>
+                    </div>
                     <div className="form-group">
                         <label for="instructions">Instructions</label>
                         {this.state.instructionInputs}
                     </div>
-                    <button onClick={e => {e.preventDefault(); this.addInstructionInput()}} className="btn btn-default btn-sm">
-                        <span>+</span> Add
-                    </button>
+                    <div className="d-flex justify-content-between">
+                        <button type="button" onClick={this.addInstructionInput} className="btn btn-default btn-sm">
+                            <span>+</span> Add
+                        </button>
+                        <button onClick={this.removeInstructionInput} type="button" className="btn btn-outline-danger btn-sm" style={this.state.instructionInputs.length <= 1 ? {display: 'none'} : {}}>
+                            remove
+                        </button>
+                    </div>
                     <div className="text-center">
                         <button type="submit" className="btn btn-primary">Submit</button>
                     </div>

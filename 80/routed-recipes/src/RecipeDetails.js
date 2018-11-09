@@ -25,7 +25,7 @@ class RecipeDetails extends Component {
         }
 
         const picture = this.state.showPicture ?
-            <img className="rounded mx-auto d-block" style={{ width: '148px', height: '148px' }} src={recipe.picture} alt={recipe.name} /> :
+            <img className="rounded mx-auto d-block" style={{ height: '148px' }} src={recipe.picture} alt={recipe.name} /> :
             null;
 
         return (

@@ -5,10 +5,10 @@ class AddedNew extends Component {
     state = {  }
     render() { 
         return (
-            <>
-                <h1>added {this.props.new}</h1>
-                <Link to="/"><button className="btn btn-primary">return to home</button></Link>
-            </>
+            <div className="text-center">
+                <h1>added {this.props.new}!</h1>
+                <Link to="/"><button className="btn btn-outline-primary btn-lg mt-5">return to list</button></Link>
+            </div>
         );
     }
 }
