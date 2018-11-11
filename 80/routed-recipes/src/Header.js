@@ -6,7 +6,7 @@ const Header = () => {
         <>
             <div className="text-center">
             <h1>PCS Recipe App</h1>
-            <Link to="/">Home</Link> | <Link to="/addRecipe">Add Recipe</Link>
+            <Link to="/recipes">Home</Link> | <Link to="/recipes/addRecipe">Add Recipe</Link>
             </div>
             <hr />
         </>

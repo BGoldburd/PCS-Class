@@ -30,13 +30,13 @@ class RecipeDetails extends Component {
 
         return (
             <React.Fragment>
-                <h3>{recipe.name}</h3>
-                <button className="btn btn-sm btn-primary" onClick={this.handleTogglePicture}>
+                <h3 className="text-capitalize"><u>{recipe.name}</u></h3>
+                <button className="btn btn-sm btn-primary mt-2 mb-2" onClick={this.handleTogglePicture}>
                     {this.state.showPicture ? 'hide' : 'show'} picture</button>
                 {picture}
-                <h3>Ingredients</h3>
+                <h3>Ingredients:</h3>
                 <ul>{this.getListItems(recipe.ingredients)}</ul>
-                <h3>Instructions</h3>
+                <h3>Instructions:</h3>
                 <ol>{this.getListItems(recipe.instructions)}</ol>
             </React.Fragment>
         );

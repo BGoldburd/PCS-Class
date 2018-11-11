@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route} from 'react-router-dom';
+import {Route, Redirect, Switch} from 'react-router-dom';
 import RecipeDetails from './RecipeDetails';
 import RecipeList from './RecipeList';
 import AddRecipe from './AddRecipe';
@@ -26,6 +26,14 @@ class App extends Component {
     ]
   };
 
+  componentDidMount() {
+    if (localStorage.recipes) {
+      this.setState({
+        recipes: JSON.parse(localStorage.recipes)
+      })
+    }
+  }
+
   handleRecipeSelection = (recipe) => {
     this.setState({
       selectedRecipe: recipe
@@ -39,19 +47,39 @@ class App extends Component {
     this.setState({
       recipes: newRecipeArray
     });
+    localStorage.recipes = JSON.stringify(newRecipeArray);
+  }
+
+  handleDeleteRecipe = id => {
+    const oldRecipeArray = [...this.state.recipes];
+    const newRecipeArray = oldRecipeArray.filter(recipe => recipe.id !== id);
+    localStorage.recipes = JSON.stringify(newRecipeArray);
+    this.setState({
+      recipes: newRecipeArray
+    });
+  }
+
+  handleDeleteAll = () => {
+    localStorage.recipes = JSON.stringify([]);
+    this.setState({
+      recipes: []
+    });
   }
 
   render() {
 
     return (
-      <React.Fragment>
+      <>
         <Header />
-        <Route path="/" exact render={() => <RecipeList recipes={this.state.recipes} handleRecipeSelection={this.handleRecipeSelection}/>} />
-        <Route path="/details" render={() => <RecipeDetails recipe={this.state.selectedRecipe} />} />
-        <Route path="/addRecipe" render={(routeProps) => <AddRecipe {...routeProps} handleAddRecipe={this.handleAddRecipe}/>} />
-        <Route path="/addedNew" render={() => <AddedNew new={this.state.recipes[this.state.recipes.length - 1].name}/>} />
-        <Route path="/test/:id" render={(props) => <h1>on page {props.match.params.id}</h1>} />
-      </React.Fragment>
+        <Switch>
+          <Route path="/recipes" exact render={() => <RecipeList deleteRecipe={this.handleDeleteRecipe} deleteAll={this.handleDeleteAll} recipes={this.state.recipes} handleRecipeSelection={this.handleRecipeSelection}/>} />
+          <Route path="/recipes/details" render={() => <RecipeDetails recipe={this.state.selectedRecipe} />} />
+          <Route path="/recipes/addRecipe" render={(routeProps) => <AddRecipe {...routeProps} handleAddRecipe={this.handleAddRecipe}/>} />
+          <Route path="/recipes/addedNew" render={() => <AddedNew new={this.state.recipes[this.state.recipes.length - 1].name}/>} />
+          <Route path="/recipes/test/:id" render={(props) => <h1>on page {props.match.params.id}</h1>} />
+          <Redirect exact from="/" to="/recipes" />
+        </Switch>
+      </>
     );
   }
 }
