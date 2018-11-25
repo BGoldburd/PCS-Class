@@ -1,0 +1,10 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<hr />
+<app-select-category [selectedIndex]="selectedIndex" [categories]="categories"></app-select-category>
+<hr>
+<app-items-list [category]="categories[selectedIndex.selected]"></app-items-list>

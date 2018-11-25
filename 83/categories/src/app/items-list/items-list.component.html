@@ -1,0 +1,13 @@
+<h2>Items</h2>
+<h2 *ngIf="!(category?.items?.length) && category">No Items in Category</h2>
+<ul>
+  <li *ngFor="let item of category?.items;let i = index;">{{item.name}} - ${{item.price}}
+    <button class="btn btn-sm btn-outline-danger mb-1" (click)="deleteItem(i)">delete</button>
+  </li>
+</ul>
+<div *ngIf="category">
+  <h4>Add Item</h4>
+  name: <input #name/> <br>
+  price: <input #price class="mt-1" type="number" step=".01"/> <br>
+  <button class="btn btn-success mt-1" (click)="addItem(name.value, price.value);name.value = '';price.value = ''">add</button>
+</div>
