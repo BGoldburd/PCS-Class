@@ -1,0 +1,17 @@
+<ul>
+  <li *ngFor="let post of postsShowing">
+    <h2>{{post.id}}</h2>
+    <h2>{{post.title}}</h2>
+    <p>{{post.body}}</p>
+  </li>
+</ul>
+
+<!-- <div id="buttonDiv">
+  <div><button *ngIf="postIndex > 0" (click)="previous()">prev</button></div>
+  <div><button *ngIf="postIndex < posts.length - numPostsToShow" (click)="next()">next</button></div>
+</div> -->
+
+<div id="buttonDiv">
+  <div><button [disabled]="postIndex <= 0" (click)="previous()">prev</button></div>
+  <div><button [disabled]="postIndex >= posts.length - numPostsToShow" (click)="next()">next</button></div>
+</div>
