@@ -1,0 +1,12 @@
+.active {
+    background-color: #007bff;
+    color: white;
+}
+a:hover {
+    text-decoration: none;
+}
+a {
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin: 6px;
+}

@@ -1,7 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { WeatherDataService } from 'src/app/shared/weather-data.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-weather-display',
@@ -9,7 +10,7 @@ import { WeatherDataService } from 'src/app/shared/weather-data.service';
   styleUrls: ['./weather-display.component.css']
 })
 export class WeatherDisplayComponent implements OnInit {
-  myZip;
+  subscription: Subscription;
   weatherData;
 
   constructor(
@@ -18,17 +19,19 @@ export class WeatherDisplayComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.myZip = this.route.paramMap.pipe(
-      switchMap((params: ParamMap) =>
-        this.service.getWeatherByZip(params.get('zip'), params.get('units')))
+    this.subscription = this.route.paramMap.pipe(
+      switchMap((params: ParamMap) => {
+        this.service.setZip(params.get('zip'));
+        this.service.setUnits(params.get('units'));
+        return this.service.getWeatherByZip(params.get('zip'), params.get('units'))})        
     ).subscribe(data => {
       this.weatherData = data;
     }, err => {
     this.weatherData = err;
     });
   }
-  
-  // @Input()
-  // weatherData;
-
+ 
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
 }

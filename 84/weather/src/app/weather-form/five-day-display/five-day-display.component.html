@@ -1,3 +1,16 @@
-<p>
-  five-day-display works!
-</p>
+<div *ngIf="weatherData?.list">
+  <div class="row m-0">
+    <h4 class="mx-auto">Five Day Forecast in <span>{{weatherData.city.name}}</span></h4>
+  </div>
+  <div id="fiveDaySegment" *ngFor="let w of weatherData.list">
+    <div class="row m-0">
+      <h4 class="mx-auto">On {{w.dt_txt | date}} at {{w.dt_txt | date:'shortTime'}}</h4>
+    </div>
+    <div class="row m-0">
+      <img src="http://openweathermap.org/img/w/{{w.weather[0].icon}}.png" alt="weather" id="weatherPicture" class="mx-auto" />
+    </div>
+    <div class="row m-0">
+      <h4 class="mx-auto">{{w.main.temp}}&deg; and {{w.weather[0].description}}</h4>
+    </div>
+  </div>
+</div>
