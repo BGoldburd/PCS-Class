@@ -29,6 +29,8 @@ export class WeatherDisplayComponent implements OnInit {
     }, err => {
     this.weatherData = err;
     });
+    
+    this.service.setUrl('current');
   }
  
   ngOnDestroy(): void {

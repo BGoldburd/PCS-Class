@@ -1,3 +1,26 @@
-#fiveDaySegment {
+#fiveDaySegment, #fiveDayDiscription {
     border-top: 1px solid #007bff;
+    display: flex;
+    justify-content: space-around;
+}
+#fiveDaySegment #dayAndSymbol {
+    display: flex;
+    justify-content: space-between;
+}
+#fiveDaySegment div, #fiveDayDiscription div {
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+#fiveDayDiscription #dayAndSymbol {
+    display: flex;
+    justify-content: flex-start;
+}
+#fiveDayDiscription {
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #a2cfff
+}
+p {
+    margin-top: 1rem;
 }

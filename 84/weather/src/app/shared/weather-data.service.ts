@@ -8,6 +8,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class WeatherDataService {
   currentZip: BehaviorSubject<string> = new BehaviorSubject('08701');
   currentUnits: BehaviorSubject<string> = new BehaviorSubject('imperial');
+  currentUrl: BehaviorSubject<string> = new BehaviorSubject('current');
 
   constructor(private httpClient: HttpClient) { }
 
@@ -40,6 +41,16 @@ export class WeatherDataService {
   setUnits(units: string) {
     if (units !== this.currentUnits.value) {
       this.currentUnits.next(units);
+    }
+  }
+
+  getUrl(): Observable<string> {
+    return this.currentUrl.asObservable();
+  }
+
+  setUrl(url: string) {
+    if (url !== this.currentUrl.value) {
+      this.currentUrl.next(url);
     }
   }
 }

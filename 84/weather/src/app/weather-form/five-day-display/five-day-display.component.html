@@ -2,15 +2,33 @@
   <div class="row m-0">
     <h4 class="mx-auto">Five Day Forecast in <span>{{weatherData.city.name}}</span></h4>
   </div>
+  <div id="fiveDayDiscription">
+      <div id="dayAndSymbol" class="row m-0">
+        <p>day</p>
+      </div>
+      <div class="row m-0">
+        <p>description</p>
+      </div>
+      <div class="row m-0">
+        <p class="mx-auto">temp</p>
+      </div>
+      <div class="row m-0">
+          <p class="mx-auto">humidity</p>
+      </div>
+  </div>
   <div id="fiveDaySegment" *ngFor="let w of weatherData.list">
-    <div class="row m-0">
-      <h4 class="mx-auto">On {{w.dt_txt | date}} at {{w.dt_txt | date:'shortTime'}}</h4>
+    <div id="dayAndSymbol" class="row m-0">
+      <p>{{w.dt_txt | date: 'MMM d'}} at {{w.dt_txt | date:'shortTime'}}</p>
+      <img src="http://openweathermap.org/img/w/{{w.weather[0].icon}}.png" alt="weather" id="weatherPicture" />
     </div>
     <div class="row m-0">
-      <img src="http://openweathermap.org/img/w/{{w.weather[0].icon}}.png" alt="weather" id="weatherPicture" class="mx-auto" />
+      <p>{{w.weather[0].description}}</p>
     </div>
     <div class="row m-0">
-      <h4 class="mx-auto">{{w.main.temp}}&deg; and {{w.weather[0].description}}</h4>
+      <p class="mx-auto">{{w.main.temp}}&deg;</p>
+    </div>
+    <div class="row m-0">
+        <p class="mx-auto">{{w.main.humidity}}&#x25;</p>
     </div>
   </div>
 </div>

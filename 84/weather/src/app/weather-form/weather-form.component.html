@@ -1,10 +1,10 @@
 <div class="row d-flex flex-row-reverse bg-primary mb-3 ml-0 mr-0 justify-content-center">
   <form class="form-inline m-3">
       <div class="form-group">
-          <input #zipInput (change)="setParams(zipInput.value, unitsSelect.value)" value={{currentZip}} class="form-control" placeholder="enter zip code" />
+          <input #zipInput (change)="setParams(zipInput.value, unitsSelect.value, currentUrl)" value={{currentZip}} class="form-control" placeholder="enter zip code" />
       </div>
       <div class="form-group ml-2">
-          <select #unitsSelect (change)="setParams(zipInput.value, unitsSelect.value)" value={{currentUnits}} class="form-control">
+          <select #unitsSelect (change)="setParams(zipInput.value, unitsSelect.value, currentUrl)" value={{currentUnits}} class="form-control">
             <option value="imperial">Farenheit</option>
             <option value="metric">Celsius</option>
             <option value="kelvin">Kelvin</option>
@@ -14,8 +14,8 @@
 </div>
 
 <div class="text-center mb-4">
-    <a [routerLink]="['current', currentZip, currentUnits]" [routerLinkActive]="'active'">CURRENT</a>
-    <a [routerLink]="['five-day', currentZip, currentUnits]" [routerLinkActive]="'active'">FIVE-DAY</a> 
+    <a (click)="routerLinkNavigation('current')" [routerLink]="['current']" [routerLinkActive]="'active'">CURRENT</a>
+    <a (click)="routerLinkNavigation('five-day')" [routerLink]="['five-day']" [routerLinkActive]="'active'">FIVE-DAY</a> 
 </div>
 
 <router-outlet></router-outlet>

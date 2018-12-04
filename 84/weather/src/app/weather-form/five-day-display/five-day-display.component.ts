@@ -27,9 +27,12 @@ export class FiveDayDisplayComponent implements OnInit {
         return this.service.getFiveDayByZip(params.get('zip'), params.get('units'))})        
     ).subscribe(data => {
       this.weatherData = data;
+      console.log(data);
     }, err => {
     this.weatherData = err;
     });
+
+    this.service.setUrl('five-day');
   }
  
   ngOnDestroy(): void {
