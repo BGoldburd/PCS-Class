@@ -42,7 +42,8 @@ router.get('/api/contacts', function(req, res, next) {
 
 router.post('/api/contacts', function(req, res, next) {
   contacts.push({id: contacts.length + 1, ...req.body});
-  res.send(contacts);
+  // res.send(contacts);
+  res.redirect('/api/contacts');
 });
 
 module.exports = router;
