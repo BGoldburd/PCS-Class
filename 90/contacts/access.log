@@ -1,0 +1,29 @@
+::1 - - [02/Jan/2019:18:34:41 +0000] "GET /contacts HTTP/1.1" 200 1277 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+::1 - - [02/Jan/2019:18:34:41 +0000] "GET /stylesheets/style.css HTTP/1.1" 304 - "http://localhost:3000/contacts" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+::1 - - [02/Jan/2019:18:34:44 +0000] "GET /favicon.ico HTTP/1.1" 404 1063 "http://localhost:3000/contacts" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+::1 - - [02/Jan/2019:18:35:10 +0000] "POST /api/contacts HTTP/1.1" 302 70 "http://localhost:3000/contacts" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+::1 - - [02/Jan/2019:18:35:10 +0000] "GET /api/contacts HTTP/1.1" 200 337 "http://localhost:3000/contacts" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+[0mGET /contacts [36m304 [0m32.638 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m5.062 ms - -[0m
+[0mPOST /api/contacts [36m302 [0m43.020 ms - 70[0m
+[0mGET /api/contacts [32m200 [0m1.190 ms - 337[0m
+::1 - - [02/Jan/2019:18:37:20 +0000] "GET /contacts HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+::1 - - [02/Jan/2019:18:37:20 +0000] "GET /stylesheets/style.css HTTP/1.1" 304 - "http://localhost:3000/contacts" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+::1 - - [02/Jan/2019:18:40:14 +0000] "GET /contacts HTTP/1.1" 304 -
+::1 - - [02/Jan/2019:18:40:14 +0000] "GET /stylesheets/style.css HTTP/1.1" 304 -
+::1 - - [02/Jan/2019:18:49:09 +0000] "GET /contacts HTTP/1.1" 200 1277 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763"
+::1 - - [02/Jan/2019:18:49:09 +0000] "GET /stylesheets/style.css HTTP/1.1" 304 - "http://localhost:3000/contacts" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763"
+::1 - - [02/Jan/2019:18:49:47 +0000] "POST /api/contacts HTTP/1.1" 302 70 "http://localhost:3000/contacts" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763"
+::1 - - [02/Jan/2019:18:49:47 +0000] "GET /api/contacts HTTP/1.1" 200 354 "http://localhost:3000/contacts" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763"
+::1 - - [02/Jan/2019:18:50:51 +0000] "GET /contacts HTTP/1.1" 200 1390 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763"
+::1 - - [02/Jan/2019:18:50:51 +0000] "GET /stylesheets/style.css HTTP/1.1" 304 - "http://localhost:3000/contacts" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763"
+::1 - - [02/Jan/2019:18:51:10 +0000] "POST /api/contacts HTTP/1.1" 302 70 "http://localhost:3000/contacts" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763"
+::1 - - [02/Jan/2019:18:51:10 +0000] "GET /api/contacts HTTP/1.1" 200 448 "http://localhost:3000/contacts" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763"
+::1 - - [02/Jan/2019:18:51:29 +0000] "POST /api/contacts HTTP/1.1" 302 70 "http://localhost:3000/contacts" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763"
+::1 - - [02/Jan/2019:18:51:29 +0000] "GET /api/contacts HTTP/1.1" 200 543 "http://localhost:3000/contacts" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763"
+::1 - - [02/Jan/2019:18:51:42 +0000] "POST /api/contacts HTTP/1.1" 302 70 "http://localhost:3000/contacts" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763"
+::1 - - [02/Jan/2019:18:51:42 +0000] "GET /api/contacts HTTP/1.1" 200 642 "http://localhost:3000/contacts" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763"
+GET /contacts 304 - - 36.923 ms
+GET /stylesheets/style.css 304 - - 5.248 ms
+::1 - - [02/Jan/2019:18:54:04 +0000] "GET /contacts HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+::1 - - [02/Jan/2019:18:54:04 +0000] "GET /stylesheets/style.css HTTP/1.1" 304 - "http://localhost:3000/contacts" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
