@@ -1,0 +1,8 @@
+{{#results}}
+    <div class="result">
+        <a href="/stockInfo/{{ symbol }}/{{ name }}"><h2>{{ name }} ({{symbol}})</h2></a>
+        <span><b>type: </b>{{ type }}</span>
+        <span><b>region: </b>{{ region }}</span>
+        <a href="{{ url }}">click here to add to favorites</a>
+    </div>
+{{/results}}

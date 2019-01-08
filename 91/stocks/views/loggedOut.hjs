@@ -1,0 +1,4 @@
+<div id="loggedOut">
+    <h1>Successfully Logged Out</h1>
+    <a href="/login">Log In</a>
+</div>

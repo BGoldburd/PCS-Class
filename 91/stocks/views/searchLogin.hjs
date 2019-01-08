@@ -1,0 +1,9 @@
+<div class="searchLogin">
+    <form method="post" action="/searchResults">
+        <label>Please Enter A Symbol:</label>
+        <input type="text" name="symbol">
+        <button>search</button>
+        <a href="/favorites">View My Favorites</a>
+    </form>
+    <a href="/login">Login/Register</a>
+</div>

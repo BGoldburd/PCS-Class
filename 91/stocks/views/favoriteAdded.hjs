@@ -1,0 +1,5 @@
+<div id="favoriteAdded">
+    <h1>Favorite Added!</h1>
+    <a href="/favorites">view favorites</a>
+    <a href="#" onclick="history.go(-1)">return to results</a>
+</div>

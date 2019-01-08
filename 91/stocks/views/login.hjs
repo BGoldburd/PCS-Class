@@ -1,0 +1,17 @@
+<div id="loginRegister">
+    {{#invalidLogin}}
+        <div id="invalid">Invalid Userame and Password</div>
+    {{/invalidLogin}}
+    <form method="post">
+        <div>
+            <label>Enter Userame:</label>
+            <input type="text" name="userName">
+        </div>
+        <div>
+            <label>Enter Password:</label>
+            <input type="password" name="password">
+        </div>
+        <button>Login</button>
+    </form>
+    <div>Not Registered? <a href="/register">Register</a> </div>
+</div>

@@ -1,0 +1,13 @@
+<section>
+    <h1>Stock Info for {{ stockName }}</h1>
+    {{#stockData}}
+    <h2>{{ date }}</h2>
+    <div>
+        <p><span><b>open: </b></span><span>{{ open }}</p></span>
+        <p><b>high: </b>{{ high }}</p>
+        <p><b>low: </b>{{ low }}</p>
+        <p><b>close: </b>{{ close }}</p>
+        <p><b>volume: </b>{{ volume }}</p>
+    </div>
+    {{/stockData}}
+</section>

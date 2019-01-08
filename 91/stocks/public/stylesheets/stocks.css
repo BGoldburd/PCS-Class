@@ -1,0 +1,17 @@
+section {
+    text-align: center;
+}
+section h2 {
+    background-color: lightcyan;
+    padding: 5px;
+    text-align: center;
+}
+section p {
+    display: flex;
+    justify-content: space-between;
+}
+section div {
+    text-align: center;
+    width: 12%;
+    margin: 0 auto;
+}

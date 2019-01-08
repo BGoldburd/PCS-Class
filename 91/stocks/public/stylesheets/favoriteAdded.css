@@ -1,0 +1,16 @@
+#favoriteAdded {
+    text-align: center;
+}
+
+#favoriteAdded h1 {
+    margin-bottom: 1.3em;
+}
+
+#favoriteAdded a {
+    color: black;
+    text-decoration: none;
+    background-color: lightcyan;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 7px;
+}

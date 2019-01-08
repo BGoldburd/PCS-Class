@@ -1,0 +1,13 @@
+<div id="loginRegister">
+    <form method="post">
+        <div>
+            <label>Create Userame:</label>
+            <input type="text" name="userName">
+        </div>
+        <div>
+            <label>Create Password:</label>
+            <input type="password" name="password">
+        </div>
+        <button>Create Account</button>
+    </form>
+</div>

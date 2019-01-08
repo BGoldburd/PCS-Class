@@ -1,0 +1,14 @@
+.result {
+    background-color: lightcyan;
+    margin: 20px 0;
+    padding: 10px;
+}
+.result h2 {
+    margin-top: 0;
+}
+.result span {
+    margin-right: 10px;
+}
+.result a {
+    text-decoration: none;
+}

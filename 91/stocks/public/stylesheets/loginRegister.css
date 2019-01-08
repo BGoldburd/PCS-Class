@@ -1,0 +1,9 @@
+#loginRegister {
+    text-align: center;
+}
+#loginRegister div {
+    margin: 10px;
+}
+#invalid {
+    color: red;
+}
